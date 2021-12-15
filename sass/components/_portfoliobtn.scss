@@ -1,0 +1,33 @@
+.portfolio {
+    background-color: $basicBcg;
+}
+.button__title {
+    padding: 6px 22px;
+    border-radius: 4px;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: $buttonPortfolioColor;
+    background-color: $buttonPortfolioBcg;
+
+    transition: color $hoverAnimation, background-color $hoverAnimation,
+        box-shadow $hoverAnimation;
+    &:hover,
+    &:focus {
+        color: $buttonPortfolioColorHover;
+        background-color: $hoverColor;
+        box-shadow: $boxShadowColorPortfolio;
+    }
+}
+.button__list {
+    @include centredFlex;
+}
+.button__list--padding {
+    padding-bottom: 50px;
+}
+.button__item {
+    margin-right: 8px;
+}

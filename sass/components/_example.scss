@@ -1,0 +1,36 @@
+.section--dn {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+.example__list {
+    display: flex;
+}
+
+.example__item {
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+.img--conteiner {
+    position: relative;
+    width: 370px;
+    height: 294px;
+}
+.img__title {
+    position: absolute;
+    padding-top: 27px;
+    left: 0;
+    bottom: 0;
+    width: 370px;
+    height: 70px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $exampleTextColor;
+    background-color: $exampleTextBcg;
+}

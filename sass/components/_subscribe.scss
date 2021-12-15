@@ -1,0 +1,42 @@
+.subscribe--conteiner {
+    display: flex;
+    margin-top: 72px;
+    margin-left: auto;
+}
+.subscribe__title {
+    @include footerTitle(flex);
+}
+.subscribe__email {
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+    margin-right: 12px;
+
+    color: $footerTitleColor;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: transparent;
+    border-radius: 4px;
+}
+.subscribe__button {
+    @extend %button;
+
+    position: relative;
+    display: inline-block;
+    padding-right: 29px;
+
+    transition: background-color $hoverAnimation, box-shadow $hoverAnimation;
+
+    &:hover,
+    &:focus {
+        background-color: $hoverColor;
+        box-shadow: $boxShadowColor;
+    }
+}
+.subscribe__icon {
+    position: absolute;
+    top: 50%;
+    right: 28px;
+
+    transform: translateY(-50%);
+}

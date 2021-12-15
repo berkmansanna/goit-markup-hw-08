@@ -1,0 +1,23 @@
+.overlay {
+    position: relative;
+    overflow: hidden;
+}
+.overlay__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 63px 24px;
+    min-height: 100%;
+    height: calc(100%-30px);
+    overflow-y: auto;
+
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+
+    color: $overlayTextColor;
+    background-color: $overlayBgc;
+
+    transform: translateY(101%);
+    transition: $animation;
+}

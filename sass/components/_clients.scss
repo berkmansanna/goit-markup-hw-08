@@ -1,0 +1,34 @@
+// .clients__list {
+//     display: flex;
+// }
+.clients__item {
+    display: flex;
+
+    width: 170px;
+    height: 92px;
+}
+.clients__link {
+    @extend %social__link--styles;
+
+    border: 1px solid;
+    border-radius: 4px;
+
+    color: $clientsColor;
+
+    transition: color $hoverAnimation;
+    &:hover,
+    &:focus {
+        color: $hoverColor;
+    }
+}
+.clients__icon {
+    display: flex;
+    width: 106p;
+    height: 60px;
+    fill: currentColor;
+}
+// .clients__item {
+//     & + & {
+//         margin-left: 30px;
+//     }
+// }
