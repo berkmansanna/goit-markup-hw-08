@@ -1,47 +1,57 @@
 .hero {
-    padding: 200px 0;
-    max-width: 1600px;
-    height: 600px;
-    margin: 0 auto;
+  padding: 200px 0;
+  max-width: 100%;
+  height: 600px;
+  margin: 0 auto;
 
-    background-color: $heroBgc;
-    background-image: linear-gradient(
-            to right,
-            $heroLinearGradient,
-            $heroLinearGradient
-        ),
-        url(../img/hero-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-color: $heroBgc;
+  background-image: linear-gradient(
+      to right,
+      $heroLinearGradient,
+      $heroLinearGradient
+    ),
+    url(../img/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @media screen and (max-width: 1199px) {
+    height: 400px;
+    padding: 118px 0;
+  }
 }
 .hero__title {
-    margin: 0 auto;
-    margin-bottom: 30px;
+  max-width: 650px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
 
-    color: $heroTitleColor;
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.3;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    max-width: 650px;
-    text-align: center;
+  color: $heroTitleColor;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  @media screen and (max-width: 1199px) {
+    width: 360px;
+
+    font-size: 26px;
+    line-height: 1.6;
+  }
 }
 .hero__button {
-    @extend %button;
+  @extend %button;
 
-    display: block;
-    padding: 10px 32px;
-    margin: 0 auto;
+  display: block;
+  padding: 10px 32px;
+  margin: 0 auto;
 
-    background-image: none;
+  background-image: none;
 
+  box-shadow: $boxShadowColor;
+  transition: background-color $hoverAnimation, box-shadow $hoverAnimation;
+  &:hover,
+  &:focus {
+    background-color: $hoverColor;
     box-shadow: $boxShadowColor;
-    transition: background-color $hoverAnimation, box-shadow $hoverAnimation;
-    &:hover,
-    &:focus {
-        background-color: $hoverColor;
-        box-shadow: $boxShadowColor;
-    }
+  }
 }

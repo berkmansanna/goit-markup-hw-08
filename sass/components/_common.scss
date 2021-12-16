@@ -1,38 +1,47 @@
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
-    color: $contentsColor;
+  color: $contentsColor;
 }
 .header {
-    border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 
-    background-color: $basicBcg;
+  background-color: $basicBcg;
 }
 .title {
-    padding-bottom: 50px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.2;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: $titleColor;
+  padding-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $titleColor;
+  @media screen and (min-width: $mobile) {
+    font-size: 28px;
+  }
+  @media screen and (max-width: 767px) {
+    padding-bottom: 30px;
+  }
 }
 .conteiner {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
 
-    @media screen and (min-width: $mobile) {
-        width: $mobile;
-    }
-    @media screen and (min-width: $tablet) {
-        width: $tablet;
-    }
-    @media screen and (min-width: $desktop) {
-        width: $desktop;
-    }
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
 }
 .section {
-    padding: 94px 0;
+  padding: 94px 0;
+  @media screen and (max-width: 767px) {
+    padding: 60px 0;
+  }
 }

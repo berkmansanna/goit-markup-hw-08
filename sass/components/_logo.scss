@@ -1,28 +1,32 @@
 .logo {
-    display: inline-flex;
-    justify-content: space-between;
-    padding-top: 24px;
-    padding-bottom: 25px;
+  display: inline-flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 25px;
 
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.1em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.1em;
 
-    color: $logoColor;
-    &:focus {
-        color: $hoverColor;
-    }
+  color: $logoColor;
+  &:focus {
+    color: $hoverColor;
+  }
+  @media screen and (min-width: $mobile) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 .logo__footer {
-    display: block;
+  display: block;
 
-    padding-top: 60px;
-    padding-bottom: 20px;
+  padding-top: 60px;
+  padding-bottom: 20px;
 }
 .header__logo--black {
-    color: $logoHeaderColor;
+  color: $logoHeaderColor;
 }
 .footer__logo--white {
-    color: $logoFooterColor;
+  color: $logoFooterColor;
 }

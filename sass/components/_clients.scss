@@ -1,31 +1,42 @@
-// .clients__list {
-//     display: flex;
-// }
+.clients__list {
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
 .clients__item {
-    display: flex;
-
-    width: 170px;
-    height: 92px;
+  display: flex;
+  width: 170px;
+  height: 92px;
+  @media screen and (min-width: $mobile) {
+    margin: 15px;
+  }
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    width: calc(50% - 2 * 15px);
+  }
 }
 .clients__link {
-    @extend %social__link--styles;
+  @extend %social__link--styles;
 
-    border: 1px solid;
-    border-radius: 4px;
+  border: 1px solid;
+  border-radius: 4px;
 
-    color: $clientsColor;
+  color: $clientsColor;
 
-    transition: color $hoverAnimation;
-    &:hover,
-    &:focus {
-        color: $hoverColor;
-    }
+  transition: color $hoverAnimation;
+  &:hover,
+  &:focus {
+    color: $hoverColor;
+  }
 }
 .clients__icon {
-    display: flex;
-    width: 106p;
-    height: 60px;
-    fill: currentColor;
+  display: flex;
+  width: 106p;
+  height: 60px;
+  fill: currentColor;
 }
 // .clients__item {
 //     & + & {

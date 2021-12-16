@@ -1,18 +1,18 @@
 @mixin footerTitle($type: inline-flex) {
-    display: $type;
+  display: $type;
 
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.1;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 
-    color: $footerTitleColor;
+  color: $footerTitleColor;
 }
 @mixin centredFlex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

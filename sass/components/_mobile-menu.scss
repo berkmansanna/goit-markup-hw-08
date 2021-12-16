@@ -1,0 +1,75 @@
+.mobile-menu__button {
+  @media screen and (max-width: 767px) {
+    display: inline-flex;
+    padding: 10px 0;
+    background-color: transparent;
+    &:hover,
+    &:focus {
+      color: $hoverColor;
+    }
+    &--close {
+      position: absolute;
+      right: 15px;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+.mobile-menu {
+  @media screen and (max-width: 767px) {
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: $basicBcg;
+
+    transform: translateY(-100%);
+    &.is-open {
+      transform: translateX(0);
+    }
+    &__position {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+.mobil-menu__solcial-list {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    margin-left: 40px;
+    margin-bottom: 48px;
+  }
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+.mobil-menu__solcial-item {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+      margin-right: 10px;
+    }
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
+}
+.mobil-menu__solcial-link {
+  @media screen and (max-width: 767px) {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    margin-right: 10px;
+
+    color: $accentColor;
+  }
+}

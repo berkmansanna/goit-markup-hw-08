@@ -1,33 +1,41 @@
 .portfolio {
-    background-color: $basicBcg;
+  background-color: $basicBcg;
 }
 .button__title {
-    padding: 6px 22px;
-    border-radius: 4px;
+  padding: 6px 22px;
+  border-radius: 4px;
 
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.6;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
 
-    color: $buttonPortfolioColor;
-    background-color: $buttonPortfolioBcg;
+  color: $buttonPortfolioColor;
+  background-color: $buttonPortfolioBcg;
 
-    transition: color $hoverAnimation, background-color $hoverAnimation,
-        box-shadow $hoverAnimation;
-    &:hover,
-    &:focus {
-        color: $buttonPortfolioColorHover;
-        background-color: $hoverColor;
-        box-shadow: $boxShadowColorPortfolio;
-    }
+  transition: color $hoverAnimation, background-color $hoverAnimation,
+    box-shadow $hoverAnimation;
+  &:hover,
+  &:focus {
+    color: $buttonPortfolioColorHover;
+    background-color: $hoverColor;
+    box-shadow: $boxShadowColorPortfolio;
+  }
 }
 .button__list {
-    @include centredFlex;
+  // @include centredFlex;
+  display: flex;
+  flex-wrap: wrap;
 }
 .button__list--padding {
-    padding-bottom: 50px;
+  padding-bottom: 50px;
+  @media screen and (max-width: 767px) {
+    padding-bottom: 40px;
+  }
 }
 .button__item {
-    margin-right: 8px;
+  margin-right: 8px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
 }

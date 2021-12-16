@@ -1,84 +1,89 @@
 .footer {
-    background-color: $footerBgc;
-    // &--flex {
-    //     display: flex;
-    // }
+  background-color: $footerBgc;
+  // &--flex {
+  //     display: flex;
+  // }
 }
-
+.footer__mobile {
+  text-align: center;
+}
 .address__list {
-    padding-bottom: 60px;
+  padding-bottom: 60px;
 }
 .address__map {
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
 
-    color: #ffffff;
+  color: #ffffff;
 
-    transition: color $hoverAnimation;
+  transition: color $hoverAnimation;
 
-    &:hover,
-    &:focus {
-        color: $hoverColor;
-    }
+  &:hover,
+  &:focus {
+    color: $hoverColor;
+  }
 }
 .address__link {
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
 
-    color: $adressColor;
+  color: $adressColor;
 
-    transition: color $hoverAnimation;
+  transition: color $hoverAnimation;
 
-    &:focus,
-    &:hover {
-        color: $hoverColor;
-    }
+  &:focus,
+  &:hover {
+    color: $hoverColor;
+  }
 }
 .address__item {
-    &:not(:last-child) {
-        padding-bottom: 9px;
-    }
+  &:not(:last-child) {
+    padding-bottom: 9px;
+  }
 }
 .footer-social--conteiner {
-    margin-top: 72px;
-    margin-left: 70px;
+  text-align: center;
+  padding-bottom: 60px;
+  // margin-top: 72px;
+  // margin-left: 70px;
 }
 .footer-social__title {
-    @include footerTitle;
+  @include footerTitle;
 }
 
 .footer-social__list {
-    display: flex;
+  display: flex;
+  justify-content: center;
 }
 .footer-social__icon {
-    display: flex;
-    width: 20px;
-    height: 20px;
+  display: flex;
+  width: 20px;
+  height: 20px;
 
-    fill: $socialIconFill;
+  fill: $socialIconFill;
 }
 .footer-social__link {
-    @extend %social__link--styles;
+  @extend %social__link--styles;
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    transition: background-color $hoverAnimation;
-    &:hover,
-    &:focus {
-        background-color: $hoverColor;
-    }
+  transition: background-color $hoverAnimation;
+  &:hover,
+  &:focus {
+    background-color: $hoverColor;
+  }
 }
 .footer-social__item {
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
 
-    background-color: $footerSocial;
-    &:not(:last-child) {
-        margin-right: 10px;
-    }
+  background-color: $footerSocial;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
