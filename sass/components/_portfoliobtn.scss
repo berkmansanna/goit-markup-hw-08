@@ -23,9 +23,13 @@
   }
 }
 .button__list {
-  // @include centredFlex;
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (min-width: $tablet) {
+    @include centredFlex;
+  }
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .button__list--padding {
   padding-bottom: 50px;

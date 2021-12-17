@@ -12,17 +12,21 @@
 }
 .team__post {
   @extend %team__text;
-
   margin-bottom: 16px;
 }
 
 .social {
-  padding: 16px 32px 30px 32px;
+  @media screen and (min-width: $desktop) {
+    padding: 0 32px 30px;
+  }
+  @media screen and (max-width: 1199px) {
+    padding: 16px 0 24px;
+  }
 }
 .social__list {
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
     justify-content: center;
   }
 }
@@ -54,8 +58,15 @@
 }
 
 .team__list {
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
     display: flex;
+    margin: -15px;
+  }
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media screen and (min-width: $desktop) {
     justify-content: space-between;
   }
 }
@@ -63,12 +74,17 @@
   box-shadow: $boxShadowModalColor;
   border-radius: 0px 0px 4px 4px;
   background-color: $basicBcg;
-
-  //   margin-right: 30px;
-  //   &:last-child {
-  //     margin-right: 0;
-  //   }
-  @media screen and (min-width: $mobile) {
+  @media screen and (min-width: $desktop) {
+    margin-right: 30px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    width: calc(50% - 2 * 15px);
+    margin: 15px;
+  }
+  @media screen and (max-width: 767px) {
     margin-bottom: 30px;
     &:last-child {
       margin-bottom: 0;

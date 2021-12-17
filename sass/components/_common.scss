@@ -9,18 +9,16 @@ body {
   background-color: $basicBcg;
 }
 .title {
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
   color: $titleColor;
-  @media screen and (min-width: $mobile) {
-    font-size: 28px;
-  }
-  @media screen and (max-width: 767px) {
-    padding-bottom: 30px;
+  @media screen and (min-width: $desktop) {
+    font-size: 36px;
+    padding-bottom: 50px;
   }
 }
 .conteiner {
@@ -34,14 +32,16 @@ body {
   }
   @media screen and (min-width: $tablet) {
     width: $tablet;
+    position: relative;
   }
   @media screen and (min-width: $desktop) {
     width: $desktop;
+    position: relative;
   }
 }
 .section {
   padding: 94px 0;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
     padding: 60px 0;
   }
 }

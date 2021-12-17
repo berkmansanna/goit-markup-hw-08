@@ -1,11 +1,24 @@
 .footer {
   background-color: $footerBgc;
-  // &--flex {
-  //     display: flex;
-  // }
+  @media screen and (min-width: $desktop) {
+    &--flex {
+      display: flex;
+    }
+  }
 }
-.footer__mobile {
-  text-align: center;
+.footer--mobile {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+}
+.footer--tablet {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+  @media screen and (max-width: 1199px) {
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 .address__list {
   padding-bottom: 60px;
@@ -48,8 +61,11 @@
 .footer-social--conteiner {
   text-align: center;
   padding-bottom: 60px;
-  // margin-top: 72px;
-  // margin-left: 70px;
+  @media screen and (min-width: $desktop) {
+    margin-top: 72px;
+    margin-left: 70px;
+    text-align: start;
+  }
 }
 .footer-social__title {
   @include footerTitle;

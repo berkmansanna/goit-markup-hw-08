@@ -36,8 +36,9 @@
       bottom: 0;
     }
   }
-  @media screen and (min-width: $tablet) {
-    display: none;
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    display: flex;
+    align-items: center;
   }
 }
 .mobil-menu__solcial-list {

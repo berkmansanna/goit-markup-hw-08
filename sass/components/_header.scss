@@ -1,5 +1,5 @@
-.header--flex {
-  // .site-nav {
+.header--flex,
+.site-nav {
   display: flex;
   @media screen and (max-width: 767px) {
     align-items: center;
@@ -7,70 +7,87 @@
   }
 }
 .site-nav__list {
-  //   display: flex;
-  //   align-items: center;
-  //   margin-left: 93px;
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
   @media screen and (max-width: 767px) {
     display: inline-block;
+    font-size: 40px;
+
+    margin-top: 48px;
+    margin-left: 40px;
   }
-}
-// .site-nav__item {
-// //   &:not(:last-child) {
-// //     margin-right: 50px;
-// //   }
-// }
-// .header__contacts {
-//   @include centredFlex;
-
-//   margin-left: auto;
-// }
-// .header__item {
-//   &:not(:last-child) {
-//     margin-right: 50px;
-//   }
-// }
-.header__icon {
-  margin-right: 10px;
-  fill: currentColor;
-}
-// .header__link--flex,
-//   .site-nav__link--flex{
-//   @include centredFlex;
-
-//   padding-top: 32px;
-//   padding-bottom: 32px;
-.site-nav__link--flex {
-  font-weight: 500;
-  //   font-size: 14px;
-  line-height: 1.1;
-  letter-spacing: 0.02em;
-}
-.site-nav__link {
-  transition: color $hoverAnimation;
-
-  color: $titleColor;
-  &:focus,
-  &:hover {
-    color: $hoverColor;
-  }
-}
-
-.site-nav__link--current {
-  color: $hoverColor;
-  //   &::after {
-  //     position: absolute;
-  //     content: "";
-  //     width: 100%;
-  //     border: solid #2196f3;
-  //     border-radius: 2px;
-  //     bottom: 0;
-  //   }
 }
 .site-nav__item {
   position: relative;
+  @media screen and (min-width: $tablet) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      padding-bottom: 32px;
+    }
+  }
+}
+.header__contacts {
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  @media screen and (max-width: 767px) {
+    margin-left: 40px;
+    margin-bottom: 64px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    margin-left: 73px;
+
+    font-size: 12px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    top: 32px;
+    right: 0;
+  }
+}
+.header__item {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      padding-bottom: 32px;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: $desktop) {
+    &:not(:last-child) {
+      margin-left: 30px;
+    }
+  }
+}
+.header__icon {
+  margin-right: 10px;
+  fill: currentColor;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  &--size {
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      width: 10px;
+      height: 14px;
+    }
+  }
 }
 .header__link {
-  font-weight: 500;
   transition: color $hoverAnimation;
 
   color: $contentsColor;
@@ -78,44 +95,53 @@
   &:focus {
     color: $hoverColor;
   }
-}
-@media screen and (max-width: 767px) {
-  .site-nav__list {
-    font-size: 40px;
-
-    margin-top: 48px;
-    margin-left: 40px;
-  }
-  .site-nav__item {
-    &:not(:last-child) {
-      padding-bottom: 32px;
-    }
-  }
-  .header__icon {
-    display: none;
-  }
-  //   .header__contacts,
-  //   .header__item {
-  //     display: flex;
-  //     flex-direction: column-reverse;
-  //   }
-  .header__contacts {
-    margin-left: 40px;
-    margin-bottom: 64px;
-  }
-  .header__item {
-    &:not(:last-child) {
-      padding-bottom: 32px;
-    }
-  }
-  .header__link {
+  @media screen and (max-width: 767px) {
     font-size: 24px;
-    line-height: 28px;
   }
-  .header__link--ms {
+}
+
+.header__link--ms {
+  @media screen and (max-width: 767px) {
     font-size: 34px;
-    line-height: 1.1;
-    letter-spacing: 0.02em;
     color: $accentColor;
+  }
+}
+.site-nav__link--flex {
+  @media screen and (min-width: $tablet) {
+    @include centredFlex;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+.site-nav__link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+
+  transition: color $hoverAnimation;
+
+  color: $titleColor;
+  &:focus,
+  &:hover {
+    color: $hoverColor;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+  }
+}
+
+.site-nav__link--current {
+  color: $hoverColor;
+  @media screen and (min-width: $tablet) {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      border: solid #2196f3;
+      border-radius: 2px;
+      bottom: 0;
+    }
   }
 }

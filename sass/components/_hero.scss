@@ -1,6 +1,6 @@
 .hero {
   padding: 200px 0;
-  max-width: 100%;
+
   height: 600px;
   margin: 0 auto;
 
@@ -14,15 +14,28 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
     height: 400px;
+    background-size: 480px 400px;
+  }
+  @media screen and (min-width: $tablet) {
+    max-width: 768px;
+    height: 400px;
+    background-size: 768px 400px;
+  }
+  @media screen and (max-width: 1199px) {
     padding: 118px 0;
   }
+  @media screen and (min-width: $desktop) {
+    max-width: 1600px;
+    height: 600px;
+    background-size: 1600px 600px;
+  }
 }
+
 .hero__title {
-  max-width: 650px;
+  width: 100%;
   text-align: center;
-  margin: 0 auto;
   margin-bottom: 30px;
 
   color: $heroTitleColor;
@@ -32,10 +45,11 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   @media screen and (max-width: 1199px) {
-    width: 360px;
-
     font-size: 26px;
     line-height: 1.6;
+  }
+  &--conteiner {
+    margin: 0 auto;
   }
 }
 .hero__button {

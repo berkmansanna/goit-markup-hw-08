@@ -1,7 +1,7 @@
 .clients__list {
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
     flex-wrap: wrap;
     margin: -15px;
   }
@@ -10,12 +10,21 @@
   display: flex;
   width: 170px;
   height: 92px;
-  @media screen and (min-width: $mobile) {
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
     margin: 15px;
   }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    width: calc((100% - 90px) / 3);
+  }
   @media screen and (max-width: 767px) {
-    flex-wrap: wrap;
     width: calc(50% - 2 * 15px);
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 30px;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 .clients__link {
@@ -39,7 +48,3 @@
   fill: currentColor;
 }
 // .clients__item {
-//     & + & {
-//         margin-left: 30px;
-//     }
-// }
