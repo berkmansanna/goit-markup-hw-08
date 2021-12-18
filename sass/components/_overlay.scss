@@ -1,23 +1,30 @@
 .overlay {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 .overlay__text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 63px 24px;
-    min-height: 100%;
-    height: calc(100%-30px);
-    overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  min-height: 100%;
+  min-width: 100%;
+  overflow-y: auto;
 
-    font-size: 18px;
-    line-height: 1.6;
-    letter-spacing: 0.03em;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
 
-    color: $overlayTextColor;
-    background-color: $overlayBgc;
+  color: $overlayTextColor;
+  background-color: $overlayBgc;
 
-    transform: translateY(101%);
-    transition: $animation;
+  transform: translateY(101%);
+  transition: $animation;
+  @media screen and(min-width:480px) {
+    width: 402px;
+  }
+  @media screen and(min-width:768px) {
+    width: 306px;
+    padding: 49px 24px;
+  }
 }

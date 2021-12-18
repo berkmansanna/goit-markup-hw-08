@@ -63,14 +63,15 @@
   }
 }
 .mobil-menu__solcial-link {
+  line-height: 1.2;
   @media screen and (max-width: 767px) {
     font-weight: 500;
-    font-size: 18px;
-    line-height: 1.2;
+    font-size: 16px;
     letter-spacing: 0.02em;
-
     margin-right: 10px;
-
     color: $accentColor;
+  }
+  @media screen and(min-width:480px) {
+    font-size: 18px;
   }
 }

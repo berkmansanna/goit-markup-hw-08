@@ -1,151 +1,187 @@
 .form {
-    position: absolute;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin: 12px 40px 20px 40px;
+
+  @media screen and (min-width: 480px) {
+    width: 370px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 448px;
+  }
 }
 .form__title {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
+  margin-top: 40px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
 
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.2;
-    text-align: center;
-    letter-spacing: 0.03em;
-
-    color: $titleColor;
+  color: $titleColor;
 }
-.form__field {
-    display: flex;
-    flex-direction: column;
+.form__list {
+  margin: 0;
 }
-
-.form__field--margin {
-    margin-bottom: 10px;
+.form__item {
+  position: relative;
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
 }
-
-.form__conteiner {
-    position: relative;
+.form__label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  .form__item:focus-within & {
+    color: $hoverColor;
+  }
 }
 .form__icon {
-    position: absolute;
-    top: 50%;
-    left: 12px;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  margin-top: 11px;
 
-    transform: translateY(-50%);
-    transition: fill $hoverAnimation;
-    .form__field:focus-within & {
-        fill: $hoverColor;
-    }
+  transform: translateY(-50%);
+  transition: fill $hoverAnimation;
+  .form__item:focus-within & {
+    fill: $hoverColor;
+  }
 }
 .form__input {
-    width: 100%;
-    height: 40px;
-    background-color: transparent;
-    margin: 0;
+  height: 40px;
+  background-color: transparent;
+  margin: 0;
 
-    padding: 12px 0 12px 42px;
+  padding: 12px 0 12px 42px;
 
-    border: 1px solid;
-    border-color: $formInputBorderColor;
-    border-radius: 4px;
+  border: 1px solid;
+  border-color: $formInputBorderColor;
+  border-radius: 4px;
 
-    transition: border-color $hoverAnimation;
-    .form__field:focus-within & {
-        border-color: $hoverColor;
-    }
-}
-
-.form__label {
-    margin-bottom: 5px;
-    font-size: 12px;
-    line-height: 1.2;
-    letter-spacing: 0.01em;
+  transition: border-color $hoverAnimation;
+  .form__item:focus-within & {
+    border-color: $hoverColor;
+  }
+  @media screen and (min-width: 480px) {
+    width: 370px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 448px;
+  }
 }
 .form__textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+
+  border: 1px solid;
+  border-color: $formInputBorderColor;
+  border-radius: 4px;
+  outline: none;
+
+  background-color: transparent;
+
+  transition: border-color $hoverAnimation;
+  .form__item:focus-within & {
+    border-color: $hoverColor;
+  }
+  @media screen and (min-width: 480px) {
+    width: 370px;
+  }
+
+  @media screen and (min-width: 1200px) {
     width: 448px;
-    height: 120px;
-    margin-bottom: 20px;
-    padding: 12px 16px;
-
-    border: 1px solid;
-    border-color: $formInputBorderColor;
-    border-radius: 4px;
-    outline: none;
-
-    background-color: transparent;
-
-    transition: border-color $hoverAnimation;
-    .form__field:focus-within & {
-        border-color: $hoverColor;
-    }
+  }
 }
-.textarea {
-    &::placeholder {
-        font-size: 14px;
-        line-height: 1.2;
-        letter-spacing: 0.01em;
+.form__textarea {
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
 
-        color: $textareaColor;
-    }
+    color: $textareaColor;
+  }
 }
 .deal {
-    display: flex;
-    align-items: center;
-    margin-left: 12px;
-    margin-right: auto;
-    margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
 
-    cursor: pointer;
+  cursor: pointer;
+  font-size: 12px;
 
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  @media screen and (min-width: $desktop) {
     font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
+  }
+}
+.deal__text {
+  display: flex;
+  @media screen and(max-width:1199px) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+
+  @media screen and(min-width:1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .deal__conditions {
-    text-decoration-line: underline;
-    text-decoration-skip-ink: none;
-    margin-left: 5px;
+  text-decoration-line: underline;
+  text-decoration-skip-ink: none;
+  margin-left: 5px;
 
-    color: $dealConditionsColor;
+  color: $dealConditionsColor;
 }
 .deal__check {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    bottom: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  bottom: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .deal__icon {
-    display: flex;
-    align-items: center;
-    width: 16px;
-    height: 15px;
-    border: 1px solid;
-    border-color: #000000;
-    border-radius: 2px;
-    margin-right: 7px;
+  display: flex;
+  align-items: center;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 4px;
+  margin-right: 7px;
+  appearance: none;
 
-    transition: background-color $hoverAnimation, border-color $hoverAnimation;
-    .deal__check:focus + &,
-    .deal__check:checked + & {
-        background-color: $hoverColor;
-        border-color: $hoverColor;
-        border-radius: 2px;
-    }
+  transition: background-color $hoverAnimation, border-color $hoverAnimation;
+  .deal__check:focus + &,
+  .deal__check:checked + & {
+    background-color: $hoverColor;
+    border-color: $hoverColor;
+    border-radius: 2px;
+  }
 }
 .form__button {
-    @extend %button;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+  @extend %button;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 30px;
 
-    transition: background-color $hoverAnimation, box-shadow $hoverAnimation;
-    &:hover,
-    &:focus {
-        background-color: $hoverColor;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    }
+  transition: background-color $hoverAnimation, box-shadow $hoverAnimation;
+  &:hover,
+  &:focus {
+    background-color: $hoverColor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
 }
